@@ -1,0 +1,17 @@
+package nsdb.test;
+
+import nsdb.cytoscape.networksimdb.CyGraphTool;
+import nsdb.hibernate.main.GraphExampleFactory;
+import nsdb.hibernate.main.GraphExamples;
+
+public class GraphGetTest {
+	
+	public static void main(String[] args){
+		//Create all examples
+		//GraphExampleFactory.generatEeExampleGraphs();
+		
+		//Create single example
+		GraphExampleFactory.generateExampleGraph(GraphExamples.example_01);
+
+	}
+}

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svnroot/networksimdb/!svn/ver/3/src/nsdb/hibernate/model
+END
+node.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/networksimdb/!svn/ver/3/src/nsdb/hibernate/model/node.hbm.xml
+END
+owner.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/networksimdb/!svn/ver/3/src/nsdb/hibernate/model/owner.hbm.xml
+END
+type.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/networksimdb/!svn/ver/3/src/nsdb/hibernate/model/type.hbm.xml
+END
+xref.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/networksimdb/!svn/ver/3/src/nsdb/hibernate/model/xref.hbm.xml
+END
+attribute.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svnroot/networksimdb/!svn/ver/3/src/nsdb/hibernate/model/attribute.hbm.xml
+END
+edge.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svnroot/networksimdb/!svn/ver/3/src/nsdb/hibernate/model/edge.hbm.xml
+END
+collection.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/networksimdb/!svn/ver/3/src/nsdb/hibernate/model/collection.hbm.xml
+END
+mapping.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/networksimdb/!svn/ver/3/src/nsdb/hibernate/model/mapping.hbm.xml
+END
+graph.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/networksimdb/!svn/ver/3/src/nsdb/hibernate/model/graph.hbm.xml
+END
+descriptor.hbm.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svnroot/networksimdb/!svn/ver/3/src/nsdb/hibernate/model/descriptor.hbm.xml
+END

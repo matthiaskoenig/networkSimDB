@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="nsdb.hibernate.entity">
+  <class name="Xref" table="xref">
+  	<id name="id" column="id" type="long">
+  		<generator class="sequence">
+        	<param name="sequence">xref_id_seq</param>
+    	</generator>
+  	</id>
+  	<property name="name" column="name" type="string" length="256" not-null="true"/>
+  	<property name="link" column="link" type="string" length="256" /> 
+	<set name="nodes" cascade="all" lazy="true"> <!-- cascade ?? -->
+      <key column="type"/>
+      <one-to-many class="nsdb.hibernate.entity.Node"/>
+    </set>
+	<set name="graphs" cascade="all" lazy="true"> <!-- cascade ?? -->
+      <key column="xref"/>
+      <one-to-many class="nsdb.hibernate.entity.Graph"/>
+    </set>
+	<set name="edges" cascade="all" lazy="true"> <!-- cascade ?? -->
+      <key column="xref"/>
+      <one-to-many class="nsdb.hibernate.entity.Edge"/>
+    </set>
+    <set name="collections" cascade="all" lazy="true"> <!-- cascade ?? -->
+      <key column="xref"/>
+      <one-to-many class="nsdb.hibernate.entity.Collection"/>
+    </set>
+  </class>
+</hibernate-mapping>

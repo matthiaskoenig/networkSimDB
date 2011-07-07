@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="nsdb.hibernate.entity">
+  <class name="Collection" table="collection">
+  	<id name="id" column="id" type="long">
+  		<generator class="sequence">
+        	<param name="sequence">collection_id_seq</param>
+    	</generator>
+  	</id>
+  	<many-to-one name="xref" column="xref" class="nsdb.hibernate.entity.Xref" not-null="true"/>
+  	<many-to-one name="owner" column="owner" class="nsdb.hibernate.entity.Owner" not-null="true"/> 
+  	<set name="descriptors" table="collection_has_descriptor" lazy="true" >
+      <key column="collection"/>
+      <many-to-many class="nsdb.hibernate.entity.Descriptor" column="descriptor"/>
+    </set>
+    <set name="mappings" cascade="all" lazy="true"> <!-- cascade ?? -->
+      <key column="collection"/>
+      <one-to-many class="nsdb.hibernate.entity.Mapping"/>
+    </set>    	
+  </class>
+</hibernate-mapping>

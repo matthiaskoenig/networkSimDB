@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svnroot/networksimdb/!svn/ver/7/src/nsdb/hibernate/entity
+END
+Graph.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/networksimdb/!svn/ver/7/src/nsdb/hibernate/entity/Graph.java
+END
+Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/networksimdb/!svn/ver/1/src/nsdb/hibernate/entity/Type.java
+END
+Attribute.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svnroot/networksimdb/!svn/ver/1/src/nsdb/hibernate/entity/Attribute.java
+END
+Edge.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/networksimdb/!svn/ver/1/src/nsdb/hibernate/entity/Edge.java
+END
+Xref.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/networksimdb/!svn/ver/1/src/nsdb/hibernate/entity/Xref.java
+END
+Node.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svnroot/networksimdb/!svn/ver/1/src/nsdb/hibernate/entity/Node.java
+END
+Owner.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svnroot/networksimdb/!svn/ver/1/src/nsdb/hibernate/entity/Owner.java
+END
+Collection.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/networksimdb/!svn/ver/1/src/nsdb/hibernate/entity/Collection.java
+END
+Mapping.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svnroot/networksimdb/!svn/ver/1/src/nsdb/hibernate/entity/Mapping.java
+END
+Descriptor.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svnroot/networksimdb/!svn/ver/1/src/nsdb/hibernate/entity/Descriptor.java
+END

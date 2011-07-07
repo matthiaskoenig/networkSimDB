@@ -1,0 +1,15 @@
+00_test	ID_19899_plasma_membrane	defaults.txt -ID_14148_blood_circulation +ID_14148_cytosol	ID_19899_plasma_membrane	Simple test flux simulation with one flux.
+#	Different oxygen for the reaction
+#	Import: glucose		Export: lactate	
+01_atp_cyto_areob	ID_20827_cytosol	defaults.txt -ID_14148_blood_circulation +ID_15668_blood_circulation	ID_20827_cytosol	Aerob ATP production.
+02_atp_cyto	0.20 ID_20333_plasma_membrane ID_20827_cytosol	defaults.txt -ID_14148_blood_circulation +ID_15668_blood_circulation %ID_17688_cytosol	ID_20827_cytosol	O2 0.20 - ATP production.
+03_atp_cyto	0.18 ID_20333_plasma_membrane ID_20827_cytosol	defaults.txt -ID_14148_blood_circulation +ID_15668_blood_circulation %ID_17688_cytosol	ID_20827_cytosol	O2 0.18 - ATP production.
+04_atp_cyto	0.16 ID_20333_plasma_membrane ID_20827_cytosol	defaults.txt -ID_14148_blood_circulation +ID_15668_blood_circulation %ID_17688_cytosol	ID_20827_cytosol	O2 0.16 - ATP production.
+05_atp_cyto	0.14 ID_20333_plasma_membrane ID_20827_cytosol	defaults.txt -ID_14148_blood_circulation +ID_15668_blood_circulation %ID_17688_cytosol	ID_20827_cytosol	O2 0.14 - ATP production.
+06_atp_cyto	0.12 ID_20333_plasma_membrane ID_20827_cytosol	defaults.txt -ID_14148_blood_circulation +ID_15668_blood_circulation %ID_17688_cytosol	ID_20827_cytosol	O2 0.12 - ATP production.
+07_atp_cyto	0.10 ID_20333_plasma_membrane ID_20827_cytosol	defaults.txt -ID_14148_blood_circulation +ID_15668_blood_circulation %ID_17688_cytosol	ID_20827_cytosol	O2 0.10 - ATP production.
+08_atp_cyto	0.08 ID_20333_plasma_membrane ID_20827_cytosol	defaults.txt -ID_14148_blood_circulation +ID_15668_blood_circulation %ID_17688_cytosol	ID_20827_cytosol	O2 0.08 - ATP production.
+09_atp_cyto	0.06 ID_20333_plasma_membrane ID_20827_cytosol	defaults.txt -ID_14148_blood_circulation +ID_15668_blood_circulation %ID_17688_cytosol	ID_20827_cytosol	O2 0.06 - ATP production.
+10_atp_cyto	0.04 ID_20333_plasma_membrane ID_20827_cytosol	defaults.txt -ID_14148_blood_circulation +ID_15668_blood_circulation %ID_17688_cytosol	ID_20827_cytosol	O2 0.04 - ATP production.
+11_atp_cyto	0.02 ID_20333_plasma_membrane ID_20827_cytosol	defaults.txt -ID_14148_blood_circulation +ID_15668_blood_circulation %ID_17688_cytosol	ID_20827_cytosol	O2 0.02 - ATP production.
+12_atp_cyto_anaerob	ID_20827_cytosol	defaults.txt -ID_14148_blood_circulation %ID_20333_plasma_membrane +ID_15668_blood_circulation	ID_20827_cytosol	Anaerob ATP production.

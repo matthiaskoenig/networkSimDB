@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="nsdb.hibernate.entity">
+  <class name="Owner" table="owner">
+  	<id name="id" column="id" type="long">
+  		<generator class="sequence">
+        	<param name="sequence">owner_id_seq</param>
+    	</generator>
+  	</id>
+  	<property name="name" column="name" type="string" length="256" not-null="true"/>
+	<set name="graphs" cascade="all" lazy="true"> <!-- cascade ?? -->
+      <key column="owner"/>
+      <one-to-many class="nsdb.hibernate.entity.Graph"/>
+    </set>
+	<set name="mappings" cascade="all" lazy="true"> <!-- cascade ?? -->
+      <key column="owner"/>
+      <one-to-many class="nsdb.hibernate.entity.Mapping"/>
+    </set>
+    <set name="collections" cascade="all" lazy="true"> <!-- cascade ?? -->
+      <key column="owner"/>
+      <one-to-many class="nsdb.hibernate.entity.Collection"/>
+    </set>
+  </class>
+</hibernate-mapping>

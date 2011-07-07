@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="./css/core.css" type="text/css" />
+<link rel="stylesheet" href="./css/print.css" type="text/css" media="print" />
+<title>SBMLReader2</title>
+</head>
+
+<body>
+	
+<div id="menu">
+<h1>SBMLReader2</h1>
+<a class="menu" href="#Introduction">Introduction</a><br />
+<a class="menu" href="#Installation">Installation</a><br />
+<a class="menu" href="#Usage">Usage Guide</a><br />
+<a class="menu" href="#Resources">Additional Resources</a><br />
+<a class="menu" href="#Development">Development</a><br />
+<a class="menu" href="#Bugs">Bugs</a><br />
+<a class="menu" href="#Features">Comming Features</a><br />
+</div>
+
+<div id="main">
+<!-- Introduction -->
+<h2><a name="top"></a><a name="Introduction"></a>Introduction</h2>
+<p>
+<a href="http://www.cytoscape.org/">Cytoscape</a> is an open source bioinformatics software platform for visualizing molecular interaction networks and integrating these interactions with gene expression profiles and other state data. 
+</p>
+
+<p>
+<span class="sbmlreader">SBMLReader2</span> is an open source Cytoscape Plugin which enables the import of networks in <a href="http://sbml.org/Main_Page">SBML</a> format. The importer is backward compatibel to the SBMLReader of the Cytoscape core plugins and supports all level and versions of SBML.
+</p>
+
+<p>
+<span class="sbmlreader">SBMLReader2</span> is based on the <a href="http://sbml.org/Software/libSBML">libSBML library</a>.
+</p>
+
+<h3>Features <span class="fluxviz">SBMLReader2 v0.1</span></h3>
+<ul>
+<li>full backward compatibility to classic Cytoscape SBMLReader
+	<ul>
+		<li>reads all SBML files supported by the SBMLReader and generates identical Cytoscape networks and layouts</li>
+	</ul>
+</li>
+
+<li>supports all versions of SBML
+	<ul>
+		<li>L1 and L2V1, L2V2, L2V3, L2V4</li>
+		<li>support depending on used libSBML</li>
+	</ul>
+</li>
+
+<li>shows SBML errors (using libSBML validit tests)</li>
+
+<li>generates stoichiometry edge attribute</li>
+</ul>
+
+<p>
+<span class="fluxviz">SBMLReader2</span> is developed and maintained by <a href="http://www.charite.de/sysbio/people/koenig/"> Matthias Koenig</a> at the <a href="http://www.charite.de/sysbio/">Computational Systems Biochemistry</a> group of the Charite Berlin.
+</p>
+<p>
+Project homepage:<br />
+<a href="http://www.charite.de/sysbio/people/koenig/software/sbmlreader2/help/">http://www.charite.de/sysbio/people/koenig/software/sbmlreader2/help/</a>.<br />
+Project hosted at:<br />
+<a href="http://sourceforge.net/projects/sbmlreader2/">http://sourceforge.net/projects/sbmlreader2/</a>.
+</p>
+
+<h3>Why SBML support ?</h3>
+<p>
+SBML is the de facto interchange standard for models in the bioinformatic and systems biology community and is used in a growing number of tools.
+</p>
+<p>
+The following graph shows the total number of known SBML-compatible software packages each year, as counted by the SBML Team. The counts shown are for approximately the middle of each year.
+</p>
+<p>
+<img src="./images/SBML_usage_overview_small.png" alt="overview SBML usage"> </img> [source <a href="http://www.sbml.org">SBML.org</a>]
+</p><p>
+Therefore the full support of all SBML formats is an important feature for any software working with biomolecular networks. 
+</p>
+
+<!-- Installation -->
+<h2><a name="Installation"></a>Installation</h2>
+<span class="toplink">[<a href="#top">top</a>]<br /></span>
+<p>
+<a href="http://www.cytoscape.org/">Cytoscape</a> has to be installed prior to the plugin installation. The plugin works with the current Cytoscape 2.6 version.
+</p>
+
+<p>
+A working <a href="http://sbml.org/Software/libSBML">libSBML installation</a> with java bindings is necessary. The <span class="code">CLASSPATH</span> to the libSBML library and the <span class="code">LD_LIBRARY_PATH</span> have to be set.<br />
+libSBML installation<br />
+<a href="http://sbml.org/Software/libSBML/docs/cpp-api/libsbml-installation.html">http://sbml.org/Software/libSBML/docs/cpp-api/libsbml-installation.html</a><br />
+Setting the pathes:<br />
+<a href="http://sbml.org/Software/libSBML/docs/cpp-api/libsbml-accessing.html">http://sbml.org/Software/libSBML/docs/cpp-api/libsbml-accessing.html</a><br />
+ Without working libSBML installation only the classic SBMLReader functionality is available.
+</p>
+<p>
+The path to the <span class="code">libsbmlj.jar</span> has to be specified as startup option for Cytoscape in the following manner:<br />
+<span class="code">-P libSBMLPath=/usr/local/lib/libsbml.jar</span><br>
+</p>
+<p>
+	The simplest way to set the pathes in the <span class="code">cytoscape.sh</span> or <span class="code">cytoscape.bat</span> respectively:<br />
+
+<span class="code">export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib</span><br />
+<span class="code">java -Dswing.aatext=true -Xss5M -Xmx512M -jar cytoscape.jar cytoscape.CyMain -p plugins "$@" -P libSBMLPath=/usr/local/lib/libsbmlj.jar<br /></span>
+</p>
+
+
+<h3>Manual Installation</h3>
+<p>
+<span class="sbmlreader">SBMLReader2</span> is avaiblable for download at <a href="http://sourceforge.net/projects/sbmlreader2/">http://sourceforge.net/projects/sbmlreader2/</a>. 
+</p>
+<p>
+[1] Download the latest version and move <span class="code">sbmlreader2-vx.x.jar</span> and <span class="code">SBML2.jar</span>  into the Cytoscape plugin directory, which is located in the Cytoscape installation directory under plugins<br /> <span class="code">$CYTO_INSTALL/plugins/</span>.
+</p>
+<p>
+[2] Remove the core SBMLReader <span class="code">SBMLReader.jar</span> from the plugin directory.
+</p>
+<p>
+The plugin is loaded automatically during the next start of Cytoscape.
+</p>
+
+<h3>Manual Uninstall</h3>
+<p>
+[1] Remove <span class="code">sbmlreader2-vx.x.jar</span> and <span class="code">SBML2.jar</span> from the Cytoscape plugin directory <span class="code">$CYTO_INSTALL/plugins/</span>.
+</p>
+<p>
+[2] Move the core SBMLReader <span class="code">SBMLReader.jar</span> back in the plugin directory.
+</p>
+
+<h3>Test Installation</h3>
+<p>
+	The successful installation of SBMLReader2 and libSBML can be tested in the Cytoscape plugin menu (<span class="code">Plugins -> Test SBMLReader2</span>).
+</p>
+
+
+<!-- Usage guide for SBMLReader -->
+<h2><a name="Usage"></a>Usage guide</h2>
+<span class="toplink">[<a href="#top">top</a>]<br /></span>
+<p>
+After installation the <span class="sbmlreader">SBMLReader2</span> plugin is integrated into Cytoscape at startup. SBML networks can be loaded via<br />
+<span class="code">File -> Import -> Network (multiple file types)</span>.
+</p>
+
+<!-- Resources -->
+<h2><a name="Resources"></a>Additional Resources</h2>
+<span class="toplink">[<a href="#top">top</a>]<br /></span>
+
+<h3>Links</h3>
+
+<p>
+<span class="sbmlreader">SBMLReader2</span><br />
+<a href="http://www.charite.de/sysbio/people/koenig/software/sbmlreader2/help/index.html">http://www.charite.de/sysbio/people/koenig/software/sbmlreader2/help/index.html</a><br /> 
+<a href="http://sourceforge.net/projects/sbmlreader2/">http://sourceforge.net/projects/sbmlreader2/</a><br />  
+<a href="http://www.charite.de/sysbio/people/koenig/">http://www.charite.de/sysbio/people/koenig/</a>
+</p>
+
+<p>
+Cytoscape<br /> 
+<a href="http://www.cytoscape.org/">http://www.cytoscape.org/</a>
+</p>
+<p>
+Cytoscape plugins<br /> 
+<a href="http://chianti.ucsd.edu/cyto_web/plugins/index.php">http://chianti.ucsd.edu/cyto_web/plugins/index.php</a>
+</p>
+<p>
+SBML.org<br />
+<a href="http://sbml.org/">http://sbml.org/</a>
+</p>
+<p>
+libSBML<br />
+<a href="http://sbml.org/Software/libSBML">http://sbml.org/Software/libSBML</a><br />
+<a href="http://sbml.org/Software/libSBML/docs/cpp-api/libsbml-installation.html">http://sbml.org/Software/libSBML/docs/cpp-api/libsbml-installation.html</a>
+</p>
+
+<!-- Development -->
+<h2><a name="Development"></a>Development</h2>
+<span class="toplink">[<a href="#top">top</a>]</span><br />
+
+<h3>Subversion Access</h3>
+<p>
+The project is open source. Everybody can participate.
+</p>
+<p>
+This project's SourceForge.net Subversion repository can be checked out through SVN with the following instruction set:<br />
+<span class="code">svn co https://sbmlreader2.svn.sourceforge.net/svnroot/sbmlreader2 sbmlreader2</span> 
+</p>
+
+<!-- Bugs -->
+<h2><a name="Bugs"></a>Bugs in <span class="sbmlreader">SBMLReader-v0.1</span></h2>
+<span class="toplink">[<a href="#top">top</a>]</span><br />
+<ul>
+<li><span class="sbmlreader">SBMLReader2</span> has minor problems parsing ListOfModifiers entries.</li>
+</ul>
+
+<!-- Features -->
+<h2><a name="Features"></a>Comming Features in <span class="sbmlreader">SBMLReader2</span></h2>
+<span class="toplink">[<a href="#top">top</a>]</span><br />
+<ul>
+<li>integration into the Cytoscape logger and error system</li>
+<li>showing details about errors in SBML files (feedback for user)</li>
+<li>integration into the Cytoscape trunk (replacing SBMLReader)</li>
+<li>generation of all edge and node attributes</li>
+<li>using available SBML position information (L2V4) for layout</li>
+<li>making available as Cytoscape plugin</li>
+</ul>
+
+</div>
+</body>
+</html>

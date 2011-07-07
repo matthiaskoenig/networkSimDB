@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="nsdb.hibernate.entity">
+  <class name="Edge" table="edge">
+  	<id name="id" column="id" type="long">
+  		<generator class="sequence">
+        	<param name="sequence">edge_id_seq</param>
+    	</generator>
+  	</id>
+  	<many-to-one name="type" column="type" class="nsdb.hibernate.entity.Type" not-null="true"/>
+    <many-to-one name="xref" column="xref" class="nsdb.hibernate.entity.Xref" not-null="true"/>  
+  	<many-to-one name="source" column="source" class="nsdb.hibernate.entity.Node" not-null="true"/>
+  	<many-to-one name="target" column="target" class="nsdb.hibernate.entity.Node" not-null="true"/>
+    <set name="graphs" table="graph_has_edge" lazy="true" >
+      <key column="edge"/>
+      <many-to-many class="nsdb.hibernate.entity.Graph" column="graph"/>
+    </set>
+    <set name="attributes" table="edge_has_attributes" lazy="true" >
+      <key column="edge"/>
+      <many-to-many class="nsdb.hibernate.entity.Attribute" column="attribute"/>
+    </set>
+  </class>
+</hibernate-mapping>

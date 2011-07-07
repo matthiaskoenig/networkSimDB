@@ -1,0 +1,10 @@
+nsdb.cytoscape
+nsdb.cytoscape.gui
+nsdb.cytoscape.gui.dialogs
+nsdb.cytoscape.networksimdb
+nsdb.cytoscape.util
+nsdb.db.postgres
+nsdb.db.sqlite
+nsdb.hibernate.dialect
+nsdb.hibernate.entity
+nsdb.hibernate.main
