@@ -60,19 +60,39 @@ matthiaskoenig
 
 2275
 
-Descriptor.class
+Type.java
 file
-0
-
-
-add
+5
 
 
 
+2010-07-01T20:33:06.000000Z
+b1da4cbe6d093f2ebbcdeae9170f2e05
+2010-07-01T18:07:47.395261Z
+1
+matthiaskoenig
 
 
-has-props
-has-prop-mods
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1114
 
 Attribute.java
 file
@@ -176,144 +196,6 @@ matthiaskoenig
 
 1299
 
-Type.class
-file
-0
-
-
-add
-
-
-
-
-
-has-props
-has-prop-mods
-
-Node.class
-file
-0
-
-
-add
-
-
-
-
-
-has-props
-has-prop-mods
-
-Descriptor.java
-file
-5
-
-
-
-2010-07-01T20:33:06.000000Z
-cda8ee521dc976a0ec7969f77257b178
-2010-07-01T18:07:47.395261Z
-1
-matthiaskoenig
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1024
-
-Owner.class
-file
-0
-
-
-add
-
-
-
-
-
-has-props
-has-prop-mods
-
-Collection.class
-file
-0
-
-
-add
-
-
-
-
-
-has-props
-has-prop-mods
-
-Mapping.class
-file
-0
-
-
-add
-
-
-
-
-
-has-props
-has-prop-mods
-
-Type.java
-file
-5
-
-
-
-2010-07-01T20:33:06.000000Z
-b1da4cbe6d093f2ebbcdeae9170f2e05
-2010-07-01T18:07:47.395261Z
-1
-matthiaskoenig
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1114
-
 Node.java
 file
 5
@@ -347,62 +229,6 @@ matthiaskoenig
 
 
 1366
-
-Graph.class
-file
-0
-
-
-add
-
-
-
-
-
-has-props
-has-prop-mods
-
-Attribute.class
-file
-0
-
-
-add
-
-
-
-
-
-has-props
-has-prop-mods
-
-Xref.class
-file
-0
-
-
-add
-
-
-
-
-
-has-props
-has-prop-mods
-
-Edge.class
-file
-0
-
-
-add
-
-
-
-
-
-has-props
-has-prop-mods
 
 Owner.java
 file
@@ -505,4 +331,38 @@ matthiaskoenig
 
 
 1366
+
+Descriptor.java
+file
+5
+
+
+
+2010-07-01T20:33:06.000000Z
+cda8ee521dc976a0ec7969f77257b178
+2010-07-01T18:07:47.395261Z
+1
+matthiaskoenig
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1024
 

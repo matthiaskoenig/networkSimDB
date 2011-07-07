@@ -94,20 +94,6 @@ matthiaskoenig
 
 7420
 
-ConnectionTest.class
-file
-0
-
-
-add
-
-
-
-
-
-has-props
-has-prop-mods
-
 HepatoCoreInfo.java
 file
 
@@ -141,32 +127,4 @@ matthiaskoenig
 
 
 2323
-
-HepatoNetInfo.class
-file
-0
-
-
-add
-
-
-
-
-
-has-props
-has-prop-mods
-
-HepatoCoreInfo.class
-file
-0
-
-
-add
-
-
-
-
-
-has-props
-has-prop-mods
 
